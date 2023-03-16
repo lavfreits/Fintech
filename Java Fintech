@@ -1,0 +1,170 @@
+import java.util.List;
+
+public class Usuario {
+    private int id;
+    private String nome;
+    private String email;
+    private Endereco endereco;
+    private String telefone;
+    private Orcamento orcamento;
+    private MetasFinanceira metas;
+    private Cartoes cartoes;
+    private Investimentos investimentos;
+    private Transferencias transferencias;
+//gets completos
+    public int getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public Orcamento getOrcamento() {
+        return orcamento;
+    }
+
+    public MetasFinanceiras getMetas() {
+        return metas;
+    }
+
+    public Cartoes getCartoes() {
+        return cartoes;
+    }
+
+    public Investimentos getInvestimentos() {
+        return investimentos;
+    }
+
+    public Transferencias getTransferencias() {
+        return transferencias;
+    }
+}
+
+public class Endereco {
+    private String rua;
+    private String bairro;
+    private String numero;
+    private String pais;
+    private String cidade;
+    private String estado;
+    private String CEP;
+  
+//gets e sets completos
+    public String getRua() {
+        return rua;
+    }
+    public String getBairro() {
+        return bairro;
+    }
+    public String getNumero() {
+        return numero;
+    }
+    public String getPais() {
+        return pais;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public String getCEP() {
+        return CEP;
+    }
+   public void setRua(String rua) {
+        this.rua = rua;
+    }
+  public void setNumero(String numero) {
+        this.numero = numero;
+    }
+  public void setPais(String pais) {
+        this.pais = pais;
+    }
+  public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+}
+
+public class Cartao {
+    private int id;
+    private string agencia;
+    private String numeroCartao;
+    private String nomeTitular;
+    private String cpfTitular;
+    private String dataFechamento;
+    private double limite;
+    private String dataVencimento;
+    private String codigoSeguranca;
+//gets completos
+    public int getId() {
+        return id;
+    }
+    public String getAgencia() {
+        return agencia;
+    }
+
+    public String getNumeroCartao() {
+        return numeroCartao;
+    }
+    public String getNomeTitular() {
+        return nomeTitular;
+    }
+    public String getCpfTitular() {
+        return cpfTitular;
+     }
+
+    public String getDataVencimento() {
+        return dataVencimento;
+    }
+    public String getDataFechamento() {
+        return dataFechamento;
+    }
+    public String getLimite() {
+        return limite;
+    }
+
+    public String getCodigoSeguranca() {
+        return codigoSeguranca;
+    }
+  //seria assim o metodo??
+    public void incluirCartao(Card cartao) {
+        cartoes.add(cartao);
+    }
+
+    public void excluirCartao(Card cartao) {
+        cartoes.remove(cartao);
+    }
+
+    public void editarCartao(Card cartaoAntigo, Card cartaoNovo) {
+        int index = cartoes.indexOf(cartaoAntigo);
+        cartoes.set(index, cartaoNovo);
+    }
+}
